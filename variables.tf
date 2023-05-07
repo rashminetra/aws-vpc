@@ -7,13 +7,13 @@ locals {
 variable "region_name" {
   description = "Region name to launch VPC network"
   type        = string
-  //default = "us-east-1"
+  default = "us-east-1"
 }
 
 variable "vpc_cidr_block" {
   description = "VPC network CIDR"
   type        = string
- // default = "10.0.0.0/16"
+ default = "10.0.0.0/16"
 }
 
 variable "environment" {
@@ -32,18 +32,18 @@ variable "owner" {
 variable "public_subnets" {
   description = "Provider public subnets CIDR values"
   type        = list(string)
-  //default = [ "10.0.1.0/24" , "10.0.2.0/24"]
+  default = [ "10.0.1.0/24" , "10.0.2.0/24"]
 }
 
 variable "private_subnets" {
   description = "Provide private subnets CIDR values"
   type        = list(string)
-  //default = [ "10.0.3.0/24" , "10.0.4.0/24"]
+  default = [ "10.0.3.0/24" , "10.0.4.0/24"]
 }
 variable "azs" {
   description = "Provide private subnets CIDR values"
   type        = list(string)
-  //default = [ "us-east-1a" , "us-east-1b"]
+  default = [ "us-east-1a" , "us-east-1b"]
 }
 variable "pub_sub_tags" {
   description = "Provide tags that needs to be as part of EKS network to manage ELB internet-facing"
